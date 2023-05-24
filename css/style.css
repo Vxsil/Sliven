@@ -1,0 +1,174 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+.container2{
+    display:grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: 150px 950px 100px;
+    grid-template-areas:
+		"header header nav nav nav"
+		"main main main main main"
+		"footer footer footer footer footer";
+}
+.container{
+    display:grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: 150px 950px 100px;
+    grid-template-areas:
+		"header header nav nav nav"
+		"main main main main main"
+		"footer footer footer footer footer";
+}
+.header{
+    grid-area: header;
+    font-size: 2em;
+    font-weight: bold;
+    padding: 50px 50px;
+    background-color: rgb(255, 255, 255);
+}
+.header a{
+     color: black;
+}
+.nav{
+    grid-area: nav;
+    background-color: rgb(255, 255, 255);
+    padding: 50px 50px;
+    padding-top: 65px;
+}
+.nav a{
+    color: black;
+}
+.nav ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav a.active{
+    font-weight: 600;
+}
+.main{
+    grid-area: main;
+}
+.main h1.h1a{
+    text-align:center;
+    color: rgba(255, 255, 255, 0.62);
+    font-size: 4em;
+}
+.main p.pa{
+    text-align: center;
+    color: rgba(255, 255, 255, 0.5);
+    margin: 50px;
+}
+.main h1.h1b{
+    text-align:left;
+    color: rgba(255, 255, 255, 0.62);
+    font-size: 3em;
+    margin: 0 25px;
+}
+.main p.pb{
+    text-align: left;
+    color: rgba(255, 255, 255, 0.5);
+    margin: 25px;
+}
+.histlink{
+    color: rgba(255, 255, 255, 0.62);
+    font-weight: 600;
+}
+.footer{
+    grid-area: footer;
+    background-color: white;
+    padding: 25px 50px;
+}
+.ft{
+    font-weight: 600;
+}
+.image1{
+    position: relative;
+    background-image: linear-gradient(rgba(15, 15, 15, 0.7),rgba(31, 31, 31, 0.7)),url(../img/sliven.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-width: 100vh;
+    width: 100%;
+}
+.image2{
+    position: relative;
+    background-image: linear-gradient(rgba(7, 7, 7, 0.904),rgba(61, 61, 61, 0.904)),url(../img/sliven.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-width: 100vh;
+    width: 100%;
+}
+.ps{
+    color: rgba(255, 255, 255, 0.62);
+    text-align: center;
+}
+.ps a.active{
+    color: rgba(255, 255, 255, 0.62);
+}
+@media screen and (max-width:950px){
+    .container2{
+        display:grid;
+        grid-template-columns: repeat(5,1fr);
+        grid-template-rows: 150px 115px 1688px 165px;
+        grid-template-areas:
+            "header header header header header"
+            "nav nav nav nav nav"
+            "main main main main main"
+            "footer footer footer footer footer";
+    } 
+    .header{
+        text-align: center;
+        font-size: 40px;
+   }
+   .nav{
+    padding-top: 44px;
+    font-size: 24px;
+   }
+   .main p.pa{
+    font-size: 18px;
+}
+.main h1.h1b{
+    font-size: 54px;
+}
+.main p.pb{
+    font-size: 24px;
+}
+}
+@media screen and (max-width:950px){
+    .container{
+        display:grid;
+        grid-template-columns: repeat(5,1fr);
+        grid-template-rows: 150px 115px auto 165px;
+        grid-template-areas:
+            "header header header header header"
+            "nav nav nav nav nav"
+            "main main main main main"
+            "footer footer footer footer footer";
+    } 
+    .header{
+        text-align: center;
+        font-size: 40px;
+   }
+   .nav{
+    padding-top: 44px;
+    font-size: 24px;
+   }
+   .main p.pa{
+    font-size: 18px;
+}
+.main h1.h1b{
+    font-size: 54px;
+}
+.main p.pb{
+    font-size: 24px;
+}
+.ps{
+    margin-bottom: 50px;
+}
+}
